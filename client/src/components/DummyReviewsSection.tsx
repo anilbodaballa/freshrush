@@ -80,16 +80,16 @@ export default function DummyReviewsSection({ product }: { product: Product }) {
 
   return (
     <section className="mt-10 ">
-      <h2 className="text-2xl font-semibold text-app-green mb-6">
-        Customer Reviews
+      <h2 className="text-2xl font-bold text-emerald-950 mb-6">
+        Customer Reviews & Ratings
       </h2>
 
-      <div className="bg-white/50 rounded-2xl p-6 md:p-8">
+      <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xs border border-slate-200/80">
         {/* Summary row */}
-        <div className="flex flex-col md:flex-row gap-8 mb-8 pb-8 border-b border-app-border">
+        <div className="flex flex-col md:flex-row gap-8 mb-8 pb-8 border-b border-slate-200">
           {/* Average */}
           <div className="flex-center flex-col md:min-w-[160px] lg:w-1/3">
-            <span className="text-5xl font-semibold text-app-green">
+            <span className="text-5xl font-extrabold text-emerald-950">
               {product.rating}
             </span>
             <div className="flex items-center gap-0.5 mt-2 mb-1">
