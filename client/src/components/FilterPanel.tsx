@@ -15,7 +15,7 @@ const FilterPanel = ({
     <div className="space-y-6">
       {/* Categories */}
       <div>
-        <h3 className="text-sm font-semibold text-app-green mb-3">
+        <h3 className="text-sm font-semibold text-emerald-950 mb-3">
           Categories
         </h3>
         <div className="space-y-1.5">
@@ -23,7 +23,7 @@ const FilterPanel = ({
             <button
               key={cat.slug}
               onClick={() => updateFilter("category", cat.slug)}
-              className={`block w-full text-left px-3 py-2 text-sm rounded-md transition-all ${category === cat.slug ? "bg-app-green text-white" : "text-app-text-light hover:bg-app-cream"}`}
+              className={`block w-full text-left px-3 py-2 text-sm rounded-lg font-medium transition-all ${category === cat.slug ? "bg-emerald-800 text-white shadow-xs" : "text-slate-600 hover:bg-emerald-50 hover:text-emerald-900"}`}
             >
               {cat.name}
             </button>
