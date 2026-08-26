@@ -53,7 +53,7 @@ export default function AdminProducts() {
           <h2 className="text-xl font-semibold text-zinc-900">Products</h2>
           <Link
             to="/admin/products/new"
-            className="flex items-center gap-2 px-4 py-2 bg-app-green text-white rounded-xl hover:bg-green-950 transition-colors font-medium text-sm"
+            className="flex items-center gap-2 px-4 py-2 bg-emerald-800 text-white rounded-xl hover:bg-emerald-700 shadow-xs transition-colors font-medium text-sm"
           >
             <PlusIcon className="size-4" /> Add Product
           </Link>
