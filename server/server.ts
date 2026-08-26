@@ -27,7 +27,7 @@ app.use(express.json());
 const port = process.env.PORT || 5000;
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Server is Live!");
+  res.send("⚡ FreshRush API Server is Live and Operational!");
 });
 app.use("/api/auth", authRouter);
 app.use("/api/products", productRouter);
@@ -46,5 +46,5 @@ app.use((error: any, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`⚡ FreshRush Express API Server running at http://localhost:${port}`);
 });
