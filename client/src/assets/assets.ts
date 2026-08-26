@@ -61,14 +61,14 @@ export const deliveryPartnerLoginImage =
 export const appPromoBannerData = {
   title: "Get fresh groceries in minutes",
   description:
-    "Download the Instacart app for exclusive deals, real-time tracking, and the freshest selection delivered right to your door.",
+    "Download the FreshRush app for exclusive deals, real-time tracking, and the freshest selection delivered right to your door.",
 };
 
 export const footerData = {
   brand: {
-    name: "Instacart",
+    name: "FreshRush",
     description:
-      "Bringing fresh, organic groceries straight from local farms to your doorstep. Nourish your home with Earth's finest.",
+      "Bringing fresh, organic groceries straight from local farms to your doorstep in minutes. Ultra-fast delivery you can trust.",
     socials: [
       { icon: SiFacebook, link: "#" },
       { icon: SiX, link: "#" },
@@ -104,7 +104,7 @@ export const footerData = {
   ],
 
   bottom: {
-    copyright: "© 2026 Instacart. All rights reserved.",
+    copyright: "© 2026 FreshRush. All rights reserved.",
     links: [
       { label: "Privacy Policy", href: "#" },
       { label: "Terms of Service", href: "#" },
