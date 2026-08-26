@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BikeIcon } from "lucide-react";
+import { BikeIcon, ZapIcon } from "lucide-react";
 import { heroSectionData } from "../../assets/assets";
 import api from "../../config/api";
 import toast from "react-hot-toast";
@@ -36,34 +36,36 @@ export default function DeliveryLogin() {
   return (
     <div className="min-h-screen flex">
       {/* Left Side */}
-      <div className="hidden lg:flex lg:w-1/2 bg-app-green relative items-center justify-center">
+      <div className="hidden lg:flex lg:w-1/2 bg-emerald-950 relative items-center justify-center">
         <img
           src={heroSectionData.hero_image}
           alt=""
-          className="absolute inset-0 object-cover h-full bg-center opacity-10"
+          className="absolute inset-0 object-cover h-full bg-center opacity-15"
         />
         <div className="relative text-center px-12">
-          <h2 className="text-4xl font-semibold text-white mb-4">
-            Delivery Partner Portal
+          <h2 className="text-4xl font-extrabold text-white mb-4">
+            FreshRush Delivery Partner Portal
           </h2>
-          <p className="text-white/60 font-serif text-xl max-w-sm mx-auto">
-            Manage your deliveries and keep customers happy.
+          <p className="text-emerald-100/80 font-serif text-xl max-w-sm mx-auto">
+            Deliver ultra-fast fresh groceries to happy customers.
           </p>
         </div>
       </div>
 
       {/* Right Side Form */}
-      <div className="flex-1 flex-center px-4 py-12 bg-app-cream">
+      <div className="flex-1 flex-center px-4 py-12 bg-slate-50">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <div className="flex-center gap-2 mb-4">
-              <BikeIcon className="size-7 text-app-green" />
-              <span className="text-2xl font-semibold text-app-green">
-                Instacart
+              <div className="size-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex-center shadow-md">
+                <ZapIcon size={20} className="fill-white" />
+              </div>
+              <span className="text-2xl font-bold tracking-tight text-slate-900">
+                Fresh<span className="text-orange-500">Rush</span>
               </span>
             </div>
-            <h1 className="text-2xl font-semibold text-app-green mb-2">
-              Delivery Partner Login
+            <h1 className="text-2xl font-bold text-emerald-950 mb-2">
+              Delivery Partner Portal Login
             </h1>
             <p className="text-sm text-app-text-light">
               Sign in to manage your deliveries
