@@ -58,15 +58,15 @@ export default function DeliveryOrderCard({
       <div className="px-5 py-4 space-y-3">
         {/* Customer */}
         <div className="flex items-center gap-2 text-sm">
-          <div className="size-8 rounded-full bg-app-cream flex-center">
-            <span className="text-xs font-semibold text-app-green">
+          <div className="size-8 rounded-full bg-emerald-50 text-emerald-800 flex-center shadow-xs font-bold">
+            <span>
               {user.name?.charAt(0)}
             </span>
           </div>
           <div>
-            <p className="font-medium text-zinc-900">{user.name}</p>
+            <p className="font-semibold text-slate-900">{user.name}</p>
             {user.phone && (
-              <p className="text-xs text-zinc-500 flex items-center gap-1">
+              <p className="text-xs text-slate-500 flex items-center gap-1">
                 <PhoneIcon className="size-3" /> {user.phone}
               </p>
             )}
@@ -74,8 +74,8 @@ export default function DeliveryOrderCard({
         </div>
 
         {/* Address */}
-        <div className="flex items-start gap-2 text-sm text-zinc-600">
-          <MapPinIcon className="size-4 text-app-green shrink-0 mt-0.5" />
+        <div className="flex items-start gap-2 text-sm text-slate-600">
+          <MapPinIcon className="size-4 text-emerald-700 shrink-0 mt-0.5" />
           <p>
             {order.shippingAddress.address}, {order.shippingAddress.city},{" "}
             {order.shippingAddress.state} {order.shippingAddress.zip}
