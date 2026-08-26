@@ -7,6 +7,7 @@ import {
   LockIcon,
   MailIcon,
   UserIcon,
+  ZapIcon,
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
@@ -37,30 +38,32 @@ const Login = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left Side */}
-      <div className="hidden lg:flex lg:w-1/2 bg-app-green relative items-center justify-center">
+      <div className="hidden lg:flex lg:w-1/2 bg-emerald-950 relative items-center justify-center">
         <img
           src={heroSectionData.hero_image}
           alt=""
-          className="absolute inset-0 object-cover h-full bg-center opacity-10"
+          className="absolute inset-0 object-cover h-full bg-center opacity-15"
         />
         <div className="relative text-center px-12">
-          <h2 className="text-4xl font-semibold text-white mb-4">
-            Welcome back to Instacart
+          <h2 className="text-4xl font-extrabold text-white mb-4">
+            Welcome back to FreshRush
           </h2>
-          <p className="text-white/60 font-serif text-xl max-w-sm mx-auto">
-            Fresh groceries and organic produce, delivered to your doorstep.
+          <p className="text-emerald-100/80 font-serif text-xl max-w-sm mx-auto">
+            Ultra-fast groceries and fresh organic produce, delivered in minutes.
           </p>
         </div>
       </div>
       {/* Right Side */}
-      <div className="flex-1 flex-center px-4 py-12 bg-app-cream">
+      <div className="flex-1 flex-center px-4 py-12 bg-slate-50">
         <div className="w-full max-w-md">
           {/* Form header message */}
           <div className="text-center mb-8">
-            <Link to={"/"} className="inline-flex items-center gap-2 mb-6">
-              <BikeIcon className="size-8 text-app-green" />
-              <span className="text-2xl font-semibold text-app-green">
-                Instacart
+            <Link to={"/"} className="inline-flex items-center gap-2 mb-6 group">
+              <div className="size-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex-center shadow-md">
+                <ZapIcon size={20} className="fill-white" />
+              </div>
+              <span className="text-2xl font-bold tracking-tight text-slate-900">
+                Fresh<span className="text-orange-500">Rush</span>
               </span>
             </Link>
             <h1 className="text-2xl font-semibold text-app-green mb-2">
