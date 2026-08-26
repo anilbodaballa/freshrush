@@ -123,13 +123,13 @@ const ProductPage = () => {
               {/* Badges */}
               <div className="absolute top-5 left-5 flex flex-wrap gap-1.5">
                 {product.isOrganic && (
-                  <span className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold bg-app-green text-white rounded-full">
+                  <span className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold bg-emerald-800 text-white rounded-full shadow-xs">
                     <LeafIcon className="w-3 h-3" />
-                    Organic
+                    100% Organic
                   </span>
                 )}
                 {product.discount > 0 && (
-                  <span className="px-2.5 py-1 text-xs font-semibold bg-app-orange text-white rounded-full">
+                  <span className="px-2.5 py-1 text-xs font-bold bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full shadow-xs">
                     {product.discount}% OFF
                   </span>
                 )}
@@ -138,11 +138,11 @@ const ProductPage = () => {
 
             {/* Right side  - Details*/}
             <div className="p-6 md:p-10 flex flex-col justify-center">
-              <span className="text-xs font-medium text-app-text-light tracking-wider mb-2 capitalize">
+              <span className="text-xs font-semibold text-emerald-700 tracking-wider mb-2 uppercase">
                 {categoryLabel}
               </span>
 
-              <h1 className="text-2xl md:text-3xl font-semibold text-app-green mb-3">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">
                 {product.name}
               </h1>
 
@@ -153,13 +153,13 @@ const ProductPage = () => {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <StarIcon
                         key={star}
-                        className={`w-4 h-4 ${star <= Math.round(product.rating) ? "text-app-warning fill-app-warning" : ""}`}
+                        className={`w-4 h-4 ${star <= Math.round(product.rating) ? "text-amber-500 fill-amber-500" : "text-slate-300"}`}
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-medium">{product.rating}</span>
+                  <span className="text-sm font-bold text-slate-800">{product.rating}</span>
 
-                  <span className="text-sm text-app-text-light">
+                  <span className="text-sm text-slate-400">
                     ({product.reviewCount} reviews)
                   </span>
                 </div>
@@ -167,12 +167,12 @@ const ProductPage = () => {
 
               {/* Price */}
               <div className="flex items-baseline gap-3 mb-5">
-                <span className="text-3xl md:text-4xl font-semibold text-app-green">
+                <span className="text-3xl md:text-4xl font-extrabold text-emerald-950">
                   {currency}
                   {product.price.toFixed(2)}
                 </span>
                 {product.originalPrice > product.price && (
-                  <span className="text-lg text-app-text-light line-through">
+                  <span className="text-lg text-slate-400 line-through">
                     {currency}
                     {product.originalPrice.toFixed(2)}
                   </span>
@@ -180,18 +180,18 @@ const ProductPage = () => {
               </div>
 
               {/* Description */}
-              <p className="text-sm text-app-text-light leading-relaxed mb-6">
+              <p className="text-sm text-slate-600 leading-relaxed mb-6">
                 {product.description}
               </p>
 
               {/* Stock */}
               <div className="mb-6">
                 {product.stock > 0 ? (
-                  <span className="text-sm text-app-success font-medium">
-                    ✓ In Stock ({product.stock} available)
+                  <span className="text-sm text-emerald-700 font-semibold flex items-center gap-1">
+                    ✓ In Stock ({product.stock} available for fast delivery)
                   </span>
                 ) : (
-                  <span className="text-sm text-app-error font-medium">
+                  <span className="text-sm text-red-600 font-semibold">
                     Out of Stock
                   </span>
                 )}
@@ -200,10 +200,10 @@ const ProductPage = () => {
               {/* Quantity + Add to Cart */}
               <div className="flex items-center gap-3">
                 {/* Quantity */}
-                <div className="flex items-center border border-app-border rounded-xl overflow-hidden">
+                <div className="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-white shadow-xs">
                   <button
                     onClick={handleMinus}
-                    className="p-3 hover:bg-app-cream transition-colors"
+                    className="p-3 hover:bg-slate-100 transition-colors"
                   >
                     <MinusIcon className="w-4 h-4" />
                   </button>
@@ -212,7 +212,7 @@ const ProductPage = () => {
                   </span>
                   <button
                     onClick={handlePlus}
-                    className="p-3 hover:bg-app-cream transition-colors"
+                    className="p-3 hover:bg-slate-100 transition-colors"
                   >
                     <PlusIcon className="w-4 h-4" />
                   </button>
@@ -224,7 +224,7 @@ const ProductPage = () => {
                   onClick={() => {
                     if (!inCart) addToCart(product, localQuantity);
                   }}
-                  className={`flex-1 py-3 font-semibold rounded-xl transition-colors flex-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] ${inCart ? "bg-app-cream text-app-green border border-app-green" : "bg-app-orange text-white hover:bg-app-orange-dark"}`}
+                  className={`flex-1 py-3 font-semibold rounded-xl transition-all flex-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] shadow-md ${inCart ? "bg-emerald-50 text-emerald-900 border border-emerald-300" : "bg-emerald-800 text-white hover:bg-emerald-700"}`}
                 >
                   <ShoppingCartIcon className="w-4 h-4" />
                   {inCart ? "Added to Cart" : "Add to Cart"}
