@@ -29,7 +29,7 @@ const ProductCard = ({ product }: Props) => {
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
           {product.discount > 0 && (
-            <span className="px-2 py-0.5 text-[10px] font-semibold uppercase bg-app-orange text-white rounded-full">
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full shadow-xs">
               {product.discount}% OFF
             </span>
           )}
@@ -37,34 +37,34 @@ const ProductCard = ({ product }: Props) => {
       </div>
 
       {/* Info */}
-      <div className="p-3.5 text-zinc-700">
-        <h3 className="text-sm leading-snug mb-1.5 line-clamp-2">
+      <div className="p-3.5 text-slate-800">
+        <h3 className="text-sm leading-snug font-medium mb-1.5 line-clamp-2">
           {product.name}
         </h3>
 
         {/* Rating */}
         {product.rating > 0 && (
           <div className="flex items-center gap-1 mb-2">
-            <Star className="size-3 text-app-warning fill-app-warning" />
-            <span className="text-xs font-medium text-app-text">
+            <Star className="size-3 text-amber-500 fill-amber-500" />
+            <span className="text-xs font-semibold text-slate-800">
               {product.rating}
             </span>
-            <span className="text-xs text-app-text-light">
+            <span className="text-xs text-slate-400">
               ({product.reviewCount})
             </span>
           </div>
         )}
 
-        {/* Price + Add to card */}
+        {/* Price + Add to cart */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1 truncate">
-            <span className="text-base font-medium">
+            <span className="text-base font-bold text-slate-900">
               {currency}
               {product.price.toFixed(1)}
             </span>
-            <span className="text-xs text-app-text-light">/{product.unit}</span>
+            <span className="text-xs text-slate-500">/{product.unit}</span>
             {product.originalPrice > product.price && (
-              <span className="text-xs text-app-text-light line-through ml-1.5">
+              <span className="text-xs text-slate-400 line-through ml-1.5">
                 {currency}
                 {product.originalPrice.toFixed(1)}
               </span>
@@ -76,10 +76,9 @@ const ProductCard = ({ product }: Props) => {
               e.stopPropagation();
               addToCart(product);
             }}
-            className="size-7 rounded-full bg-app-orange text-white flex-center shrink-0 hover:bg-app-orange-dark transition-colors active:scale-95"
+            className="size-8 rounded-full bg-emerald-700 text-white flex-center shrink-0 hover:bg-emerald-800 shadow-sm transition-colors active:scale-95"
           >
-            {/* Without stopPropagation(), clicking the button would also trigger the parent's onClick */}
-            <Plus className="size-3.5" />
+            <Plus className="size-4" />
           </button>
         </div>
       </div>
