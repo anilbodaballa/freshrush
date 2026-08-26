@@ -105,11 +105,11 @@ const Products = () => {
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h1 className="text-2xl font-semibold text-app-green">
-                  {activeCategory ? activeCategory.name : "All Products"}
+                <h1 className="text-2xl font-bold text-emerald-950">
+                  {activeCategory ? activeCategory.name : "All Fresh Products"}
                 </h1>
-                <p className="text-sm text-app-text-light mt-0.5">
-                  {products.length} products found
+                <p className="text-sm text-slate-500 mt-0.5">
+                  {products.length} fresh items available
                 </p>
               </div>
 
@@ -117,7 +117,7 @@ const Products = () => {
                 {/* Mobile filter toggle */}
                 <button
                   onClick={() => setMobileFiltersOpen(true)}
-                  className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm bg-white rounded-xl border border-app-border hover:bg-app-cream transition-colors"
+                  className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm bg-white rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors shadow-xs"
                 >
                   <SlidersHorizontal className="size-4" /> Filters
                 </button>
@@ -127,15 +127,15 @@ const Products = () => {
                   <select
                     value={sort}
                     onChange={(e) => updateFilter("sort", e.target.value)}
-                    className="appearance-none pl-3 pr-8 py-2 text-sm bg-white rounded-xl border border-app-border focus:border-app-green outline-none cursor-pointer"
+                    className="appearance-none pl-3 pr-8 py-2 text-sm bg-white rounded-xl border border-slate-200 focus:border-emerald-700 outline-none cursor-pointer shadow-xs"
                   >
-                    <option value="">Newest</option>
+                    <option value="">Newest Arrivals</option>
                     <option value="price_asc">Price: Low to High</option>
                     <option value="price_desc">Price: High to Low</option>
                     <option value="rating">Top Rated</option>
                     <option value="name">A to Z</option>
                   </select>
-                  <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-app-text-light pointer-events-none" />
+                  <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
                 </div>
               </div>
             </div>
@@ -145,17 +145,17 @@ const Products = () => {
               <Loading />
             ) : products.length === 0 ? (
               <div className="text-center py-16">
-                <p className="text-lg font-semibold text-app-green mb-2">
+                <p className="text-lg font-bold text-emerald-950 mb-2">
                   No products found
                 </p>
-                <p className="text-sm text-app-text-light mb-4">
+                <p className="text-sm text-slate-500 mb-4">
                   Try adjusting your filter or search terms
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="px-5 py-2 text-sm font-medium bg-app-green text-white rounded-xl hover:bg-app-green-light transition-colors"
+                  className="px-5 py-2 text-sm font-medium bg-emerald-800 text-white rounded-xl hover:bg-emerald-700 transition-colors shadow-xs"
                 >
-                  ClearFilters
+                  Clear Filters
                 </button>
               </div>
             ) : (
@@ -179,7 +179,7 @@ const Products = () => {
                       updateFilter("page", String(i + 1));
                       scrollTo(0, 0);
                     }}
-                    className={`size-9 rounded-lg text-sm font-medium transition-colors ${page === i + 1 ? "bg-app-green text-white " : "bg-white text-app-text-light hover:bg-app-cream"}`}
+                    className={`size-9 rounded-lg text-sm font-semibold transition-colors ${page === i + 1 ? "bg-emerald-800 text-white shadow-xs" : "bg-white text-slate-600 hover:bg-slate-100"}`}
                   >
                     {i + 1}
                   </button>
