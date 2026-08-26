@@ -30,7 +30,7 @@ const App = () => {
         toastOptions={{
           duration: 3000,
           style: {
-            background: "#1B3022",
+            background: "#064e3b",
             color: "#fff",
             borderRadius: "12px",
             fontSize: "14px",
