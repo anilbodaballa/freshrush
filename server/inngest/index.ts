@@ -5,7 +5,7 @@ import sendEmail from "../config/nodemailer.js";
 const LOW_STOCK_THRESHOLD = 10;
 
 // Create a client to send and receive events
-export const inngest = new Inngest({ id: "grocery-delivery" });
+export const inngest = new Inngest({ id: "freshrush-delivery" });
 
 // Low Stock alert to admin email
 const checkLowStock = inngest.createFunction(
