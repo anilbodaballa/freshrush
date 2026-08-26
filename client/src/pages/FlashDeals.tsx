@@ -22,17 +22,15 @@ const FlashDeals = () => {
   return (
     <div className="min-h-screen bg-app-cream">
       {/* Banner */}
-      {/* leanear gradient color */}
-      <div className="bg-linear-to-r from-app-orange to-app-orange-dark text-white py-10">
+      <div className="bg-gradient-to-r from-orange-600 via-amber-600 to-emerald-800 text-white py-12 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex-center gap-2 mb-3">
-            <Zap className="size-6 fill-white" />
-            <h1 className="text-3xl font-semibold">Flash Deals</h1>
-            <Zap className="size-6 fill-white" />
+            <Zap className="size-7 fill-white text-amber-300 animate-pulse" />
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">FreshRush Flash Deals</h1>
+            <Zap className="size-7 fill-white text-amber-300 animate-pulse" />
           </div>
-          <p className="text-white/80 max-w-md mx-auto">
-            Limited-time offers on your favorite organic products. Grab them
-            before they're gone!
+          <p className="text-white/90 max-w-md mx-auto font-medium text-sm sm:text-base">
+            Ultra-fast flash discounts on organic produce & top essentials. Limited quantity — grab them now!
           </p>
         </div>
       </div>
