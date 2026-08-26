@@ -11,6 +11,7 @@ import {
   ShoppingCartIcon,
   UserIcon,
   XIcon,
+  ZapIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -39,15 +40,19 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <nav className="bg-white sticky top-0 z-50 border-b border-app-border">
+    <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200/80 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 gap-4">
         {/* Logo */}
         <Link
           to={"/"}
-          className="flex items-center gap-2 text-[22px] font-medium shrink-0"
+          className="flex items-center gap-2 text-2xl font-bold text-slate-900 tracking-tight shrink-0 group"
         >
-          <BikeIcon size={24} />
-          Instacart
+          <div className="size-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex-center shadow-md group-hover:scale-105 transition-transform">
+            <ZapIcon size={20} className="fill-white" />
+          </div>
+          <span>
+            Fresh<span className="text-orange-500">Rush</span>
+          </span>
         </Link>
         <div className="w-full flex items-center justify-end gap-4 lg:gap-10">
           {/* Nav Links - Desktop */}
