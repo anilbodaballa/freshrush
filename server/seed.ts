@@ -403,7 +403,7 @@ const seedDB = async () => {
     await prisma.product.createMany({ data: products });
     console.log(`Created ${products.length} products`);
 
-    console.log("Seed completed successfully!");
+    console.log("⚡ FreshRush database seed completed successfully!");
     process.exit(0);
   } catch (error) {
     console.error("Seed error:", error);
