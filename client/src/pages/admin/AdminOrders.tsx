@@ -247,7 +247,7 @@ export default function AdminOrders() {
                 <button
                   onClick={handleAssign}
                   disabled={!selectedPartner}
-                  className="flex-1 py-2.5 text-sm font-medium text-white bg-app-green rounded-xl hover:bg-app-green-light transition-colors disabled:opacity-50"
+                  className="flex-1 py-2.5 text-sm font-medium text-white bg-emerald-800 rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50"
                 >
                   Assign
                 </button>
