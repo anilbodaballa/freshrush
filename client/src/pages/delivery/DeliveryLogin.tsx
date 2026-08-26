@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BikeIcon, ZapIcon } from "lucide-react";
+import { ZapIcon } from "lucide-react";
 import { heroSectionData } from "../../assets/assets";
 import api from "../../config/api";
 import toast from "react-hot-toast";
