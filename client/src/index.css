@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap");
 @import "tailwindcss";
 
 @theme {
-    --color-app-green: #1b3022;
-    --color-app-green-light: #2d4a35;
-    --color-app-green-lighter: #3d6b4a;
+    --color-app-green: #064e3b;
+    --color-app-green-light: #047857;
+    --color-app-green-lighter: #10b981;
     --color-app-orange: #f97316;
     --color-app-orange-dark: #ea580c;
-    --color-app-cream: #faf7f2;
-    --color-app-cream-dark: #f0ebe3;
-    --color-app-text: #1b3022;
-    --color-app-text-light: #6b7280;
-    --color-app-border: #e5e7eb;
-    --color-app-success: #22c55e;
+    --color-app-cream: #f8fafc;
+    --color-app-cream-dark: #f1f5f9;
+    --color-app-text: #0f172a;
+    --color-app-text-light: #64748b;
+    --color-app-border: #e2e8f0;
+    --color-app-success: #10b981;
     --color-app-error: #ef4444;
     --color-app-warning: #f59e0b;
 
@@ -23,7 +23,7 @@
 body {
     font-family: var(--font-sans);
     color: var(--color-app-text);
-    background-color: var(--color-app-cream);
+    background-color: #f8fafc;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -35,12 +35,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-app-cream);
+    background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-app-green-lighter);
-    border-radius: 3px;
+    background: #10b981;
+    border-radius: 4px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -62,7 +62,21 @@ input:focus {
 }
 
 .dropdown-link {
-    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-zinc-500 hover:bg-orange-50/80 hover:text-zinc-900 transition-colors;
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-slate-600 hover:bg-emerald-50/80 hover:text-emerald-950 transition-colors;
+}
+
+.badge-fresh {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200;
+}
+
+.badge-rush {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 border border-orange-200;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 /* Animations */
@@ -71,7 +85,6 @@ input:focus {
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -83,7 +96,6 @@ input:focus {
         opacity: 0;
         transform: translateX(100%);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -95,7 +107,6 @@ input:focus {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -103,11 +114,9 @@ input:focus {
 }
 
 @keyframes pulse-soft {
-    0%,
-    100% {
+    0%, 100% {
         opacity: 1;
     }
-
     50% {
         opacity: 0.7;
     }
