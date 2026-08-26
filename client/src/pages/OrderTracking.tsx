@@ -73,11 +73,11 @@ const OrderTracking = () => {
         {/* order id, date, status */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-semibold text-app-green">
+            <h1 className="text-2xl font-bold text-emerald-950">
               Order #{order!.id.slice(-8).toUpperCase()}
             </h1>
-            <p className="text-sm text-app-text-light mt-1">
-              Placed on
+            <p className="text-sm text-slate-500 mt-1">
+              Placed on{" "}
               {new Date(order!.createdAt).toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
