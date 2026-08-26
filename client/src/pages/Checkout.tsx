@@ -131,7 +131,7 @@ const Checkout = () => {
           <ArrowLeft className="size-4" /> Back
         </button>
 
-        <h1 className="text-2xl font-semibold text-app-green mb-8">Checkout</h1>
+        <h1 className="text-2xl font-bold text-emerald-950 mb-8">Secure Checkout</h1>
 
         {/* Steps */}
         <div className="flex items-center gap-2 mb-8">
@@ -139,12 +139,12 @@ const Checkout = () => {
             <div key={s.key} className="flex items-center gap-2">
               <button
                 onClick={() => setStep(s.key)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-colors ${step === s.key ? "bg-app-green text-white" : "bg-white text-app-text-light"}`}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-colors ${step === s.key ? "bg-emerald-800 text-white shadow-xs" : "bg-white text-slate-600 border border-slate-200"}`}
               >
                 <s.icon className="size-4" />
                 {s.label}
                 {i < steps.length - 1 && (
-                  <ChevronRightIcon className="size-4 text-spp-text-light" />
+                  <ChevronRightIcon className="size-4 text-slate-400" />
                 )}
               </button>
             </div>
