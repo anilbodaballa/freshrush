@@ -101,16 +101,16 @@ const Navbar = () => {
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
                   className="flex items-center gap-2 p-2"
                 >
-                  <div className="size-7 rounded-full bg-green-950 text-white flex-center">
+                  <div className="size-8 rounded-full bg-gradient-to-tr from-emerald-700 to-emerald-500 text-white font-semibold flex-center shadow-xs">
                     {user.name.charAt(0).toUpperCase()}
                   </div>
-                  <ChevronDownIcon className="size-3 text-zing-500" />
+                  <ChevronDownIcon className="size-3 text-slate-500" />
                 </button>
               ) : (
                 <div className="flex-center gap-2">
                   <Link
                     to={"/login"}
-                    className="hidden md:flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-green-950 rounded-full hover:bg-green-950-light transition-colors"
+                    className="hidden md:flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-emerald-800 hover:bg-emerald-700 rounded-full shadow-xs transition-colors"
                   >
                     <UserIcon size={16} />
                     Sign In
