@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "./context/CartContext.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
 
+console.log("⚡ Initializing FreshRush Ultra-Fast Grocery App...");
+
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <AuthProvider>
