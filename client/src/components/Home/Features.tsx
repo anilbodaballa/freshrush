@@ -7,14 +7,14 @@ const Features = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {heroSectionData.hero_features.map((feature, i) => (
             <div key={i} className="flex items-center gap-3 py-3">
-              <div className="size-10 rounded-lg bg-app-cream flex-center shrink-0">
+              <div className="size-10 rounded-xl bg-emerald-50 text-emerald-700 flex-center shrink-0 shadow-xs">
                 <feature.icon className="size-5" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-app-green">
+                <p className="text-sm font-bold text-slate-900">
                   {feature.title}
                 </p>
-                <p className="text-xs text-app-text-light">{feature.desc}</p>
+                <p className="text-xs text-slate-500">{feature.desc}</p>
               </div>
             </div>
           ))}
