@@ -127,17 +127,17 @@ const Addresses = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page header */}
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-semibold text-app-green">
-            My Addresses
+          <h1 className="text-2xl font-bold text-emerald-950">
+            My Delivery Addresses
           </h1>
           <button
             onClick={() => {
               resetForm();
               setShowForm(true);
             }}
-            className="px-4 py-2 bg-app-green text-white text-sm font-semibold rounded-xl hover:bg-app-green-light transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-emerald-800 text-white text-sm font-semibold rounded-xl hover:bg-emerald-700 shadow-xs transition-colors flex items-center gap-2"
           >
-            <PlusIcon className="size-4" /> Add Address
+            <PlusIcon className="size-4" /> Add New Address
           </button>
         </div>
 
