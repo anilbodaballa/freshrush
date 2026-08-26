@@ -1,6 +1,5 @@
 import {
   ArrowRightIcon,
-  BikeIcon,
   ChevronDownIcon,
   LogOutIcon,
   MapPinIcon,
